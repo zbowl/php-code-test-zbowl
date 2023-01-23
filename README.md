@@ -1,35 +1,53 @@
-# Postcard Builder
+# ePostCard
 
-This code assessment is intended to test your competency by providing a set of designs and functionality requirements similar to those that you would receive day to day on the job.  You will be given a window of time in which to complete as many of the requirements as possible.
+ePostCard is a simple web application that allows you to send a postcard to a friend. 
 
-## Overview
+## Features
 
-This code test is modeled You are tasked with converting [these designs](https://www.dropbox.com/s/z9pgouu5b6jbsfe/Code%20Test.xd?dl=0) to a fully functional web application. 
+* Create and send a unique Link of the postcard to anyone (e.g. http://epostcard.com/123456)
+* Live preview the front and back of the postcard before sending/saving
+  
 
-Prior to the test, we will review the requirements with you via screen share.  Do your best to anticipate any questions and ask them during the review.  If you need to skip or deviate from the requirements for any reason, or if a question arises after the review session, please create a readme documenting your thoughts and push it to the repo.  This will give us insight into your written communication style, as well as your approach to problem solving.
+## Features to come
 
-Points are awarded based on the number of quality features completed within the allotted time.  Partial credit will be awarded for functionality with bugs.  Prioritize quality over quantity.  One polished feature without bugs is given more value than several half-baked features.  
+* Postcard
+  * Ability to flip the postcard
+* Allow for custom images to be uploaded for the front and back of the postcard
+* Allow for longitudes and latitudes
+  * Use Google Maps or Open Street Maps API to display the location on the postcard
+* Allow user to draw their own signature on the postcard
+* Add a QR code to the postcard
 
-Architecture and readability will also be considered.  This includes an assessment of your understanding and implementation of general best practices related to architecture, code readability, and sustainability.  We’re looking for quality but not perfection in the following:
     
-- Proper use of Laravel architecture and concepts, such as routing, models, controllers, query building, etc.
-- Adherence to database schema best practices.
-- Code readability including code spacing, formatting, file and variable naming.
+### ToDo
+- [ ] Form Inputs
+  - [ ] Recipients Name
+  - [ ] Recipients Address
+    - [ ] Street
+    - [ ] City
+    - [ ] State
+    - [ ] Zip
+    - [ ] Message textarea for the postcard (maybe a wysiwyg editor)*
+- [ ] Form Validation
+  - [ ] Required Fields
+- [ ] Form Submission
+    - [ ] Save postcard to database
+    - [ ] Generate a unique link for the postcard
 
-## Tech Requirements
+- [ ] Postcard
+  - [ ] Display the postcard
+  - [ ] Ability to flip the postcard
 
-The following technologies/packages are required to complete this code assessment:
-Git
-Package managers (Composer and NPM)
-Laravel
-Vue.js
-Tailwind CSS
+#### Back End
+- [ ] Migrations
+    - [ ] Create a table for postcards
+    - [ ] Create a table for contacts
+    - [ ] Create a table for user postcards
 
-The use of any additional packages or libraries is at your discretion.  Using a 3rd party package to satisfy a requirement will not negatively impact your score, unless the package is clearly unsustainable for any reason (deprecation, lack of support, dependency problems, etc).
 
-## Turning In Your Work
+## Stack
+* Laravel 9
+* Vue 3
+* TailwindCSS 3
+* Inertia
 
-When you have completed this test, please open up a PR for us to review. If any of your work needs clarification, this would be the place to do it. 
-
-## Questions
-Feel free to open an issue or email cully@programodo.com. We will get to your question as soon as you can but please move on to other tasks while you wait.

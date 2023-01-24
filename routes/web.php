@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\PostcardController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
-});
+    return Inertia::render('Dashboard');
+})->name('dashboard');
+
+Route::post('/postcards', [PostcardController::class, 'store'])->name('postcards.store');
+Route::get('/postcards', [PostcardController::class, 'index'])->name('postcards.index');
+Route::get('/postcards/create', [PostcardController::class, 'create'])->name('postcards.create');

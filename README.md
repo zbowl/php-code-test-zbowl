@@ -59,6 +59,7 @@ ePostCard is a simple web application that allows you to send a postcard to a fr
   * The user will be able to save the postcard to their account and view it later. (Future feature)
 * Will there be a database?
   * Yes, there will be a database to store the postcards and contacts.
+* What Fonts will be used?
 * Database: MySQL or Postgres?
 * Database Design: 
   * PostCard

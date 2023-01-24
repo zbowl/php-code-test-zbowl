@@ -17,7 +17,7 @@ ePostCard is a simple web application that allows you to send a postcard to a fr
   * Use Google Maps or Open Street Maps API to display the location on the postcard
 * Allow user to draw their own signature on the postcard
 * Add a QR code to the postcard
-
+* Save a list of contacts for the user to send postcards to.
     
 ### ToDo
 - [ ] Form Inputs
@@ -51,3 +51,49 @@ ePostCard is a simple web application that allows you to send a postcard to a fr
 * TailwindCSS 3
 * Inertia
 
+# Questions
+
+* Will there be a user system?
+  * No, this is a simple application that will not require a user system.
+  * The user will be able to create a postcard and send it to a friend. The friend will be able to view the postcard by visiting the link that was generated for the postcard.
+  * The user will be able to save the postcard to their account and view it later. (Future feature)
+* Will there be a database?
+  * Yes, there will be a database to store the postcards and contacts.
+* Database: MySQL or Postgres?
+* Database Design: 
+  * PostCard
+    * id
+    * recipients_name
+    * street1
+    * street2
+    * city
+    * state
+    * zip
+    * message 
+    * created_at
+    * updated_at
+ 
+
+  * Contact
+    * id
+    * name
+    * street1
+    * street2
+    * city
+    * state
+    * zip
+    * created_at
+    * updated_at
+
+  * User PostCard
+    * id
+    * user_id
+    * postcard_id
+    * created_at
+    * updated_at
+  * User Contact
+    * id
+    * user_id
+    * contact_id
+    * created_at
+    * updated_at
